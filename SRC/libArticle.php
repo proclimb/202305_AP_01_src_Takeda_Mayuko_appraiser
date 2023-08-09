@@ -309,8 +309,7 @@ function subArticleEditComplete()
 		$res = mysqli_query($conn, $sql);
 	} else {
 		// 新規登録
-		$sql = fnSqlArticleInsert(fnNextNo('ARTICLE'), $article, $room, $keyPlace, $address, $articleNote, $keyBox, $drawing, $sellCharge, $del);
-
+		$sql = fnSqlArticleInsert(fnNextNo('ARTICLE'), $keyPlace, $article, $address, $keyBox, $articleNote, $drawing, $sellCharge, $room, $del);
 		$res = mysqli_query($conn, $sql);
 
 		/* $sql = fnSqlFManagerInsert(fnNextNo('FM'),$article,$room,$articleNote,$del);
