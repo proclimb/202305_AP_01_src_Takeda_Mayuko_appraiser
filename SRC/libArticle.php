@@ -24,7 +24,7 @@ function subArticle()
 	}
 
 	if (!$sPage) {
-		$sPage = l;
+		$sPage = 1;
 	}
 
 	if (!$orderBy) {
@@ -132,7 +132,7 @@ function subArticle()
 					<td class="list_td<?php print $i ?>"><a href="javascript:form.act.value='stock';form.sName.value='<?php print $article ?>';form.sRoom.value='<?php print $room ?>';form.submit();">表示</a></td>
 				</tr>
 			<?php
-				$i = ($i + 1) % 3;
+				$i = ($i + 1) % 2;
 			}
 			?>
 		</table>
@@ -188,7 +188,7 @@ function subArticleEdit()
 		$btnImage = 'btn_enter.png';
 	}
 
-	subMenu2();
+	subMenu();
 ?>
 	<script type="text/javascript" src="./js/article.js"></script>
 
